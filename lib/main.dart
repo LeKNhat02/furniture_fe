@@ -8,6 +8,8 @@ import 'provider/product_provider.dart';
 import 'provider/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'provider/cart_provider.dart';
+import 'provider/favorite_provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -54,6 +56,12 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<FilterProvider>(
           create: (context) => FilterProvider(),
+        ),
+        ChangeNotifierProvider<CartProvider>(  // ✅ Thêm CartProvider
+          create: (context) => CartProvider(),
+        ),
+        ChangeNotifierProvider<FavoriteProvider>(  // ✅ Thêm dòng này
+          create: (context) => FavoriteProvider(),
         ),
       ],
       child: MaterialApp(
