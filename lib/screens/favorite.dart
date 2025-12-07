@@ -40,7 +40,7 @@ class _FavoritePageState extends State<FavoritePage> {
           color: Colors.black,
         ),
         title: const AutoSizeText(
-          'Favorite',
+          'Yêu thích',
           maxFontSize: 17,
           minFontSize: 12,
           style: TextStyle(

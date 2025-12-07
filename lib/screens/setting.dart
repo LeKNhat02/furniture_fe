@@ -87,23 +87,23 @@ class _SettingPageState extends State<SettingPage> {
                   const SizedBox(
                     height: 100,
                   ),
-                  getRowDirect(Icons.account_circle_outlined, 'Profile'),
+                  getRowDirect(Icons.account_circle_outlined, 'Hồ sơ'),
                   const SizedBox(
                     height: 10,
                   ),
-                  getRowDirect(Icons.favorite_border_outlined, 'Favorite'),
+                  getRowDirect(Icons.favorite_border_outlined, 'Yêu thích'),
                   const SizedBox(
                     height: 10,
                   ),
-                  getRowDirect(Icons.shopping_cart_outlined, 'Cart'),
+                  getRowDirect(Icons.shopping_cart_outlined, 'Giỏ hàng'),
                   const SizedBox(
                     height: 10,
                   ),
-                  getRowDirect(Icons.receipt_long_sharp, 'Order'),
+                  getRowDirect(Icons.receipt_long_sharp, 'Đơn hàng'),
                   SizedBox(
                     height: MediaQuery.of(context).size.height / 4,
                   ),
-                  getRowDirect(Icons.power_settings_new_outlined, 'Log out')
+                  getRowDirect(Icons.power_settings_new_outlined, 'Đăng xuất')
                 ],
               ),
             ),
@@ -116,19 +116,19 @@ class _SettingPageState extends State<SettingPage> {
   Widget getRowDirect(IconData icon, String text) {
     return ElevatedButton(
       onPressed: () {
-        if(text == "Profile") {
+        if(text == "Hồ sơ") {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfilePage()));
         }
-        else if(text == "Favorite") {
+        else if(text == "Yêu thích") {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const FavoritePage()));
         }
-        else if(text == "Cart") {
+        else if(text == "Giỏ hàng") {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const CartPage()));
         }
-        else if(text == "Order") {
+        else if(text == "Đơn hàng") {
           Navigator.push(context, MaterialPageRoute(builder: (context) => const OrderPage()));
         }
-        else if(text == "Log out") {
+        else if(text == "Đăng xuất") {
 
           showDialog(
               context: context,

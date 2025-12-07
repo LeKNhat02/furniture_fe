@@ -37,7 +37,7 @@ class _CartPageState extends State<CartPage> {
           color: Colors.black,
         ),
         title: const AutoSizeText(
-          'Cart',
+          'Giỏ hàng',
           maxFontSize: 17,
           minFontSize: 12,
           style: TextStyle(
@@ -225,7 +225,7 @@ class _CartPageState extends State<CartPage> {
             SizedBox(height: MediaQuery.of(context).size.height / 2 - 200,),
             const Image(image: AssetImage("assets/icons/empty.png")),
             const Text(
-              'Not Cart',
+              'Giỏ hàng trống',
               style: TextStyle(
                 fontSize: 20,
               ),
@@ -260,7 +260,7 @@ class _CartPageState extends State<CartPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                "Sub Item",
+                "Số lượng",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,
@@ -298,7 +298,7 @@ class _CartPageState extends State<CartPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                "Total",
+                "Tổng cộng",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,
@@ -349,7 +349,7 @@ class _CartPageState extends State<CartPage> {
                     color: Color(0xffb23a48),
                     borderRadius:  BorderRadius.all(Radius.circular(20)),
                   ),
-                  child: const Text('Checkout' , style: TextStyle(
+                  child: const Text('Thanh toán' , style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                   ),),

@@ -21,8 +21,11 @@ class ApiService {
   late final Dio _dio;
 
   void _initDio() {
-    final baseUrl = dotenv.env['API_BASE_URL'] ?? 'http://10.0.2.2:8000';
+    final baseUrl = dotenv.env['API_BASE_URL'] ?? 'http://10.0.2.2:8000/api';
     final timeout = int.tryParse(dotenv.env['API_TIMEOUT'] ?? '30') ?? 30;
+    
+    print('🌐 API_BASE_URL: $baseUrl');
+    print('⏱️ API_TIMEOUT: $timeout seconds');
     
     _dio = Dio(BaseOptions(
       baseUrl: baseUrl,
@@ -31,6 +34,28 @@ class ApiService {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
+      },
+    ));
+    
+    // Add logging interceptor
+    _dio.interceptors.add(InterceptorsWrapper(
+      onRequest: (options, handler) {
+        print('🔵 REQUEST: ${options.method} ${options.baseUrl}${options.path}');
+        print('📦 Data: ${options.data}');
+        return handler.next(options);
+      },
+      onResponse: (response, handler) {
+        print('🟢 RESPONSE: ${response.statusCode} ${response.requestOptions.path}');
+        print('📨 Data: ${response.data}');
+        return handler.next(response);
+      },
+      onError: (error, handler) {
+        print('🔴 ERROR: ${error.message}');
+        print('📍 URL: ${error.requestOptions.baseUrl}${error.requestOptions.path}');
+        if (error.response != null) {
+          print('📨 Response: ${error.response?.data}');
+        }
+        return handler.next(error);
       },
     ));
   }

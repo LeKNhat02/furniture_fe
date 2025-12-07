@@ -117,7 +117,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
               color: Colors.black,
             ),
             title: const AutoSizeText(
-              'Product detail',
+              'Chi tiết sản phẩm',
               maxFontSize: 17,
               minFontSize: 12,
               style: TextStyle(
@@ -645,7 +645,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
           width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.all(10),
           child: Text(
-            "Sells ${widget.productID.sellest.toStringAsFixed(0)}",
+            "Đã bán ${widget.productID.sellest.toStringAsFixed(0)}",
             textAlign: TextAlign.justify,
             style: const TextStyle(
               fontSize: 16,
@@ -674,7 +674,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Good to know',
+                'Nên biết',
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 17,
@@ -780,7 +780,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Measurement',
+                'Kích thước',
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 17,
@@ -879,7 +879,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Material',
+                'Chất liệu',
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 17,
@@ -977,7 +977,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Review',
+                'Đánh giá',
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 17,
@@ -1323,12 +1323,12 @@ var bottomNavigationItems = <BottomNavigationBarItem>[
   const BottomNavigationBarItem(
     backgroundColor: Color(0x00ffffff),
     icon: Icon(Icons.add, color: Colors.black),
-    label: "Cart",
+    label: "Giỏ hàng",
   ),
   const BottomNavigationBarItem(
     backgroundColor: Color(0x00ffffff),
     icon: Icon(Icons.favorite_border_outlined, color: Colors.black),
-    label: "Favorite",
+    label: "Yêu thích",
   ),
 ];
 

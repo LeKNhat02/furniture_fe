@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4db5be09-c18a-4ca0-b28a-066c188e360e" name="Changes" comment="" />
+    <list default="true" id="4db5be09-c18a-4ca0-b28a-066c188e360e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/favorite.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/favorite.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/order.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/order.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/product_detail.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/product_detail.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/register.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/setting.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/setting.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/api_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/search.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/search.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +24,9 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -30,9 +45,10 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/admin/.vscode/furniture_api-main/furniture_fe",
+    "last_opened_file_path": "C:/Users/admin/.vscode/furniture_be/furniture_fe",
     "settings.editor.selected.configurable": "configurable.group.appearance",
     "show.migrate.to.gradle.popup": "false"
   }

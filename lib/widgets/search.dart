@@ -26,7 +26,7 @@ Widget searchField(BuildContext context) {
           children: [
             Container(
               margin: const EdgeInsets.only(left: 10),
-              child:const Text('Search . . .' , style: TextStyle(
+              child:const Text('Tìm kiếm . . .' , style: TextStyle(
                 color: Colors.grey,
               ),),
             ),

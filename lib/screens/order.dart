@@ -86,9 +86,9 @@ class _OrderPageState extends State<OrderPage> {
                 fontWeight: FontWeight.bold,
               ),
               tabs: const [
-                Tab(text: 'Checking',),
-                Tab(text: 'Delivering',),
-                Tab(text: 'Complete'),
+                Tab(text: 'Đang kiểm tra',),
+                Tab(text: 'Đang giao',),
+                Tab(text: 'Hoàn thành'),
               ],
             ), // Tab
           ),

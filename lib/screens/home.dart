@@ -251,7 +251,7 @@ class _HomePageState extends State<HomePage> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   const Text(
-                                    "Category",
+                                    "Danh mục",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: Colors.black,
@@ -264,7 +264,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Row(
                                       children: const [
                                         Text(
-                                          'View all',
+                                          'Xem tất cả',
                                           style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -292,7 +292,7 @@ class _HomePageState extends State<HomePage> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   const Text(
-                                    "New Archive",
+                                    "Sản phẩm mới",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: Colors.black,
@@ -305,7 +305,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Row(
                                       children: const [
                                         Text(
-                                          'View all',
+                                          'Xem tất cả',
                                           style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -334,7 +334,7 @@ class _HomePageState extends State<HomePage> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   const Text(
-                                    "Top Seller",
+                                    "Bán chạy",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: Colors.black,
@@ -347,7 +347,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Row(
                                       children: const [
                                         Text(
-                                          'View all',
+                                          'Xem tất cả',
                                           style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -376,7 +376,7 @@ class _HomePageState extends State<HomePage> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   const Text(
-                                    "Limited Offer",
+                                    "Khuyến mãi",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: Colors.black,
@@ -389,7 +389,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Row(
                                       children: const [
                                         Text(
-                                          'View all',
+                                          'Xem tất cả',
                                           style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,

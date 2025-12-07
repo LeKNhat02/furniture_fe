@@ -79,7 +79,7 @@ class _RegisterState extends State<Register> {
               children: [
                 Image(image: AssetImage("assets/icons/success.png"), width: 60),
                 SizedBox(height: 20),
-                Text("Register successfully", style: TextStyle(color: Colors.white, fontSize: 18)),
+                Text("Đăng ký thành công", style: TextStyle(color: Colors.white, fontSize: 18)),
                 SizedBox(height: 20),
               ],
             ),
@@ -104,7 +104,7 @@ class _RegisterState extends State<Register> {
               children: [
                 const Image(image: AssetImage("assets/icons/cancel.png"), width: 60),
                 const SizedBox(height: 20),
-                Text("Register failed: ${error.toString()}", style: const TextStyle(color: Colors.white, fontSize: 16)),
+                Text("Đăng ký thất bại: ${error.toString()}", style: const TextStyle(color: Colors.white, fontSize: 16)),
                 const SizedBox(height: 20),
                 ElevatedButton(
                   style: ButtonStyle(backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffecd8e0))),
@@ -167,11 +167,11 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     List<String> errorMessage = [
-      "Full name is only character and not empty",
-      "Phone is only ${currentPhoneNumber.digit} number and not empty",
-      'Password must least 8 digit and not empty',
-      'Confirm Password must equal to Password and not empty',
-      'Phone is exist',
+      "Họ tên chỉ chứa chữ cái và không được để trống",
+      "Số điện thoại phải có đúng ${currentPhoneNumber.digit} chữ số",
+      'Mật khẩu phải có ít nhất 8 ký tự và không được để trống',
+      'Xác nhận mật khẩu phải khớp với mật khẩu',
+      'Số điện thoại đã tồn tại',
     ];
 
     return Scaffold(
@@ -239,7 +239,7 @@ class _RegisterState extends State<Register> {
                           ),
                           Column(mainAxisSize: MainAxisSize.max, children: [
                             const Text(
-                              "Sign up",
+                              "Đăng ký",
                               style: TextStyle(
                                   color: Color(0xff410000),
                                   fontSize: 30,
@@ -248,7 +248,7 @@ class _RegisterState extends State<Register> {
                             Container(
                               margin: const EdgeInsets.all(10),
                               child: const Text(
-                                "Create your new account",
+                                "Tạo tài khoản mới của bạn",
                                 style: TextStyle(
                                   color: Color(0xff410000),
                                   fontSize: 16,
@@ -317,7 +317,7 @@ class _RegisterState extends State<Register> {
                         controller: userName,
                         keyboardType: TextInputType.text,
                         decoration: const InputDecoration(
-                          hintText: 'Full Name',
+                          hintText: 'Họ và tên',
                           prefixIcon: Icon(
                             Icons.account_circle,
                             color: Color(0xff7c0019),
@@ -532,7 +532,7 @@ class _RegisterState extends State<Register> {
                         controller: password,
                         keyboardType: TextInputType.text,
                         decoration: const InputDecoration(
-                          hintText: "Password",
+                          hintText: "Mật khẩu",
                           prefixIcon: Icon(
                             Icons.key_rounded,
                             color: Color(0xff7c0019),
@@ -614,7 +614,7 @@ class _RegisterState extends State<Register> {
                         controller: confirmPassword,
                         keyboardType: TextInputType.text,
                         decoration: const InputDecoration(
-                          hintText: "Confirm Password",
+                          hintText: "Xác nhận mật khẩu",
                           prefixIcon: Icon(
                             Icons.key_rounded,
                             color: Color(0xff7c0019),
@@ -647,7 +647,7 @@ class _RegisterState extends State<Register> {
                       child: TextButton(
                           onPressed: () {},
                           child: const Text(
-                            "By creating, you are agreeing to our Terms of use and Privacy Policy.",
+                            "Bằng việc tạo tài khoản, bạn đồng ý với Điều khoản sử dụng và Chính sách bảo mật của chúng tôi.",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.normal,
@@ -692,7 +692,7 @@ class _RegisterState extends State<Register> {
                         child: MaterialButton(
                           minWidth: double.infinity,
                           child: const Text(
-                            'Create',
+                            'Tạo tài khoản',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           onPressed: () {
@@ -705,7 +705,7 @@ class _RegisterState extends State<Register> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
-                          "Already have an account ? ",
+                          "Đã có tài khoản? ",
                           style: TextStyle(
                               color: Color(0xff410000),
                               fontSize: 17,
@@ -721,7 +721,7 @@ class _RegisterState extends State<Register> {
                             });
                           },
                           child: const Text(
-                            "Sign in",
+                            "Đăng nhập",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 17,

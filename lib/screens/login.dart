@@ -69,7 +69,14 @@ class _LoginState extends State<Login> {
 
       final api = ApiService();
       final SharedPreferences prefs = await SharedPreferences.getInstance();
-      final token = await api.login(phone: phoneController.text, password: passwordController.text);
+      
+      // Fix phone format: remove leading 0 if country code is selected
+      String phoneNumber = phoneController.text.trim();
+      if (phoneNumber.startsWith('0')) {
+        phoneNumber = phoneNumber.substring(1); // Remove leading 0
+      }
+      
+      final token = await api.login(phone: currentPhoneNumber.value + phoneNumber, password: passwordController.text);
       if (token != null) {
         prefs.setString('AUTH_TOKEN', token);
         api.setToken(token);
@@ -89,7 +96,7 @@ class _LoginState extends State<Login> {
               children: [
                 Image(image: AssetImage("assets/icons/success.png"), width: 60),
                 SizedBox(height: 20),
-                Text("Login successfully", style: TextStyle(color: Colors.white, fontSize: 18)),
+                Text("Đăng nhập thành công", style: TextStyle(color: Colors.white, fontSize: 18)),
                 SizedBox(height: 20),
               ],
             ),
@@ -114,7 +121,7 @@ class _LoginState extends State<Login> {
               children: [
                 const Image(image: AssetImage("assets/icons/cancel.png"), width: 60),
                 const SizedBox(height: 20),
-                Text("Login failed: ${error.toString()}", style: const TextStyle(color: Colors.white, fontSize: 16)),
+                Text("Đăng nhập thất bại: ${error.toString()}", style: const TextStyle(color: Colors.white, fontSize: 16)),
                 const SizedBox(height: 20),
                 ElevatedButton(
                   style: ButtonStyle(backgroundColor: WidgetStateProperty.all<Color>(const Color(0xffecd8e0))),
@@ -151,8 +158,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
 
     List<String> errorMessage = [
-      "Phone is only ${currentPhoneNumber.digit} number and not empty",
-      'Password must least 8 digit and not empty',
+      "Số điện thoại phải có đúng ${currentPhoneNumber.digit} chữ số",
+      'Mật khẩu phải có ít nhất 8 ký tự',
     ];
 
     return Scaffold(
@@ -213,7 +220,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     const Text(
-                      "Welcom back",
+                      "Chào mừng trở lại",
                       style: TextStyle(
                           color: Color(0xff410000),
                           fontSize: 30,
@@ -223,7 +230,7 @@ class _LoginState extends State<Login> {
                       height: 5,
                     ),
                     const Text(
-                      "Login to your account",
+                      "Đăng nhập vào tài khoản của bạn",
                       style: TextStyle(
                         color: Color(0xff410000),
                         fontSize: 16,
@@ -403,7 +410,7 @@ class _LoginState extends State<Login> {
                         obscureText: passwordVisible,
                         controller: passwordController,
                         decoration: InputDecoration(
-                          hintText: 'Password',
+                          hintText: 'Mật khẩu',
                           prefixIcon: const Icon(
                             Icons.key_outlined,
                             color: Color(0xff7c0019),
@@ -449,7 +456,7 @@ class _LoginState extends State<Login> {
                       child: TextButton(
                           onPressed: () {},
                           child: const Text(
-                            "Forget Password ?",
+                            "Quên mật khẩu?",
                             style: TextStyle(
                                 color: Color(0xff410000),
                                 fontStyle: FontStyle.italic,
@@ -495,7 +502,7 @@ class _LoginState extends State<Login> {
                         child: MaterialButton(
                           minWidth: double.infinity,
                           child: const Text(
-                            'Login',
+                            'Đăng nhập',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           onPressed: () {
@@ -508,7 +515,7 @@ class _LoginState extends State<Login> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
-                          "Don't have account ?",
+                          "Chưa có tài khoản?",
                           style: TextStyle(
                               color: Color(0xff410000),
                               fontSize: 17,
@@ -524,7 +531,7 @@ class _LoginState extends State<Login> {
                             });
                           },
                           child: const Text(
-                            "Sign up",
+                            "Đăng ký",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 17,
