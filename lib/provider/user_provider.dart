@@ -10,28 +10,18 @@ class UserProvider extends ChangeNotifier {
   String? _error;
 
   Future<void> fetchCurrentUser() async {
+    // ✅ 1. Chặn gọi trùng
+    if (_loading) return;
+
+    // ✅ 2. Không có token thì không gọi
+    if (!_api.hasToken) return;
+
     _loading = true;
     _error = null;
     notifyListeners();
+
     try {
       _currentUser = await _api.fetchCurrentUser();
-    } catch (e) {
-      _error = e.toString();
-    } finally {
-      _loading = false;
-      notifyListeners();
-    }
-  }
-
-  Future<void> updateCurrentUser(UserSQ user) async {
-    _loading = true;
-    _error = null;
-    notifyListeners();
-    try {
-      final updated = await _api.updateCurrentUser(user);
-      if (updated != null) {
-        _currentUser = updated;
-      }
     } catch (e) {
       _error = e.toString();
     } finally {
@@ -43,10 +33,14 @@ class UserProvider extends ChangeNotifier {
   void signOut() {
     _api.signOut();
     _currentUser = null;
+    _error = null;
+    _loading = false;
     notifyListeners();
   }
 
   UserSQ? get currentUser => _currentUser;
   bool get isLoading => _loading;
   String? get error => _error;
+  bool get isLoggedIn => _currentUser != null;
 }
+
